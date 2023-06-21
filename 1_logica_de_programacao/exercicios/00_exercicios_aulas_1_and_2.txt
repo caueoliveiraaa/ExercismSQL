@@ -1,0 +1,72 @@
+CLASS 1 - 2: 
+
+1: Leia dois números do usuário e informe o resultado da soma dos dois números.
+
+2: Leia um número informado pelo usuário e informe se o número é positivo ou negativo.
+
+3: Crei um programa que leia 3 números e identifique qual é o maior número.
+
+4: Crie um programa que leia um mês em formato de número (1 - 12) e printe em qual estação do ano o mês está.
+   OBS:
+	- Primavera = Setembro, Outubro, Novembro
+	- Verão = Dezembro, Janeiro, Fevereiro
+	- Outono = Março, Abril, Maio
+	- Inverno = Junho, Julho, Agosto
+
+5: Escreva um programa que leia a idade e o nome do usuário e printe essas informações usando concatenação.
+
+6: Leia a idade do usuário e informe quantos anos ele terá em vinte anos no futuro.
+
+7: Leia um número informado pelo usuário e informe se o número é impar ou par.
+
+8: Leia dois números do usuário, verifique se os números são positivos, se forem printe a soma, a subtração
+   a divisão, e a multiplicação dos dois números. Caso o número seja negativo, printe
+   uma mensagem de aviso.
+
+9: Escreva um programa que leia a idade e o nome de 3 usuários distintos e printe a qual categoria eles pertencem.
+   	Criança: 0-12
+   	Adolescente: 13-19
+   	Adulto: 20-64
+	Idoso: 65+ 
+	
+	printar => usuário X pertence a categoria Y. (Exemplo)
+
+10: Calcular o desconto em uma compra com base no valor total e na forma de pagamento.
+    Se a forma de pagamento for dinheiro haverá 10% de desconto, se for em cartão, 5%.
+
+11: Escreva um programa que solicite dois números ao usuário e determine se o primeiro número é maior,
+    menor ou igual ao segundo número. Exiba uma mensagem correspondente para cada caso.
+
+12: Leia a senha do usuário e peça para que ele informe a senha outra vez. Faça a verificação necessária
+    para saber se as senhas são iguais.
+
+13: Crie um programa que solicite a idade do usuário e verifique se ele pode votar.
+    No Brasil, apenas maiores de 16 anos podem votar. Imprima "Pode votar"
+    se a idade for igual ou maior que 16 e "Não pode votar" caso contrário.
+
+14: Crie um programa que leia uma letra informada pelo usuário e identifique se a letra é um vogal ou consoante.
+
+15: Leia um ano informado pelo usuário e printe se o ano é bisexto ou não.
+    OBS: 
+	- Um ano bisexo é divisível por 4, mas não por 100! 
+	- Um ano bisexo é divisível por 100 e por 400!
+
+16: Leia os três lados do triângulo e verificar se um triângulo é equilátero, isósceles ou escaleno com base nos seus lados.
+	- Equilátero = todos os lados iguais
+	- Isósceles = pelo menos dois lados iguais
+	- Escaleno = todos os lados diferentes
+
+17: Verifique se uma data é válida com base no dia, mês e ano informados separadamente.	
+
+18: Leia a idade do usuário e se ele possuí carteira de motorista ou não e informe se ele pode dirigir 
+    se beaseando nos dados informados.
+
+19: Crie um programa que leia o dia da semana em número e printe o dia da semana por extenso que corresponde ao número informado.
+    Informe uma mensagem de aviso caso o número não seja válido.
+
+20: Leia os nomes de 5 produtos com seus respectivos preços, comprados em um supermercado online pelo usuário.
+    Printe o nome de cada produto com o valor após o desconto ter sido aplicado.
+    Se o valor for maior que 100 reais, 20% de desconto. Se for maior que 50 reais e menor que 100 reais, 10% de desconto.
+    Se o valor for menor que 50 reais, 3% de desconto.
+     
+

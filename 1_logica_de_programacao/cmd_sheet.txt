@@ -1,0 +1,52 @@
+cls  = Limpa o terminal
+
+dir  = Mostra o conteúdo do diretório/pasta atual
+
+dir <caminho_para_diretorio>  = Mostra o conteúdo do diretório informado no caminho
+
+mkdir <nome_pasta>  = Cria uma pasta
+
+rmdir <nome_pasta>  = Deleta uma pasta vazia
+
+rmdir <nome_pasta> /s  = Deleta uma pasta com seus sub-diretórios
+
+del <nome_arquivo> = Deleta arquivo
+
+copy <nome_arquivo_original> <nome_arquivo_novo> = Copia um arquivo 
+
+move <nome_arquivo_original> <nome_arquivo_novo> = Move um arquivo 
+
+cd <caminho_diretorio> = Entra em um diretório/pasta
+
+cd ..  = Volta um diretório/pasta
+
+cd ../../..  = Volta três diretórios
+
+cd ../../../../../..  = Volta seis diretórios
+
+cd /  = Volta para o diretório principal => (diretório C nas maioria dos casos para windows)
+
+taskkill /f /im <nome_aplicacao.exe>  = Força aplicações a parar
+
+systeminfo  = Informações do sistema operacional
+
+ipconfig  = Informações do IP do computador
+
+echo <"texto"> > <arquivo.txt> = Escreve dentro do arquivo
+
+type <nome_arquivo> = Mostra o conteúdo do arquivo
+
+
+PARA O GIT APENAS:
+
+    git branch  = Mostra em qual branch você está
+
+    git log  = Mostra log de comits
+
+    git status  = Verifica o status do repositório
+
+    git add <arquivos>  = Adiciona os arquivos com mudanças
+
+    git commit -m "mensagem commit"  = Comita os arquivos adicionados
+
+    git push -u oring main/master = Envia para o github/gitlab

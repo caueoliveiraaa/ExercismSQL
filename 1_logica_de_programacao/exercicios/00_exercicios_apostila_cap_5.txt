@@ -1,0 +1,27 @@
+a - Peça duas notas, em seguida realize a média e informe se o aluno está
+aprovado ou reprovado. Para essa atividade, o aluno precisa ter média 7 ou
+mais para ser considerado aprovado.
+
+b - O usuário informa dois valores numéricos, se forem iguais deverão ser
+somados, caso contrário multiplicados.
+
+c - Haverá uma lista com três produtos que uma lanchonete vende, o usuário
+precisa informar o código do produto, em seguida o valor pago por ele. Nosso
+sistema precisa retornar o troco que deve ser dado ao cliente, valide caso o
+cliente informe um pagamento inferior ao valor do pedido.
+
+Código Pedido Valor:
+    1 Pizza R$ 12,00
+    2 Pão de Queijo R$ 4,00
+    3 Macarrão R$ 16,00
+
+d - Peça para o usuário informar três números, em seguida exiba o menor deles.
+
+e - O usuário deverá informar a largura de cada lado de um triângulo, peça as
+três larguras (direito, inferior e esquerdo) e verifique o tipo de triângulo. Os
+tipos e triângulos são:
+
+Tipo Especificação:
+    Isósceles Dois lados iguais e um diferente
+    Escaleno Três lados diferentes
+    Equilátero Três lados iguai
