@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // b - O usuário informa dois valores numéricos, se forem iguais deverão ser
+        // somados, caso contrário multiplicados.
+
+        // Solicitar os dois valores numéricos ao usuário
+        let valor_1 = parseFloat(prompt('Digite o primeiro valor:'))
+        let valor_2 = parseFloat(prompt('Digite o segundo valor:'))
+
+        // Verificando se os valores são iguais
+        if (valor_1 == valor_2) {
+            console.log('Os valores são iguais. Soma: ' + valor_1 + valor_2)
+        } else {
+            console.log('Os valores são diferentes. Multiplicação: ' + valor_1 * valor_2)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a - Peça duas notas, em seguida realize a média e informe se o aluno está
+        // aprovado ou reprovado. Para essa atividade, o aluno precisa ter média 7 ou
+        // mais para ser considerado aprovado.
+
+
+        // Solicitar as duas notas do aluno
+        let nota1 = parseFloat(prompt('Digite a primeira nota:'))
+        let nota2 = parseFloat(prompt('Digite a segunda nota:'))
+
+        // Calcular a média das duas notas
+        let media = (nota1 + nota2) / 2   // Calculando a média das notas
+
+        // Validar notas/média do aluno
+        if (media >= 7) {
+            console.log('Aluno aprovado! Média: ' + media.toFixed(2))
+        } else {
+            console.log('Aluno reprovado! Média: ' + media.toFixed(2))
+        }
+
+    </script>
+</body>
+</html>
