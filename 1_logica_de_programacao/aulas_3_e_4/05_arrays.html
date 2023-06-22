@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays/Listas</title>
+</head>
+<body>
+    <script>
+        // Tamanho do array imutável
+        let lista_vazia_1  // Permitido em JS - (Em Python é necessário = '' ou = 0 ou = [], etc)
+        let lista_vazia_2 = []
+
+        let lista_frutas = ['Banana', 'Laranja', 'Maça', 'Manga']
+        // Visualmente mais claro
+        lista_frutas = [  
+            'Banana',
+            'Laranja',
+            'Maça',
+            'Manga'
+        ]
+
+        let tamanho_frutas = lista_frutas.length
+        
+        // Tamanho do array mutável
+        const lista_cidades = ['Blumenau', 'Itajaí', 'Brusque']
+        const tamanho_cidades = lista_cidades.length
+
+        console.log(
+            'Tamanho da lista de frutas: ' + tamanho_frutas + ' items.' +
+            ' e tamanho lista de cidades: ' + tamanho_cidades + ' items.'
+        )
+
+
+
+
+        // Métodos/Funções para arrays
+        let lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        console.log('\nLista de números: ' + lista_numeros)
+        
+        let ultimo_numero = lista_numeros.pop()  // Retorna último item
+        console.log('Removeu último item: ' + ultimo_numero + ' de lista_numeros')
+        console.log('\nLista de números: ' + lista_numeros)
+        
+        lista_numeros.push(100)  // Adiciona item no final
+        console.log('\nLista de números: ' + lista_numeros)
+        
+        
+
+        
+        // Index dos(as) arrays/listas
+        
+        let lista_frutas_2 = ['Banana', 'Laranja', 'Maça', 'Manga', 'Melância']
+
+        console.log('\nArray lista_frutas_2: ')
+        for (let i = 0; i < lista_frutas_2.length; i++) {
+            console.log(lista_frutas_2[i])
+        }
+        
+        lista_frutas_2[0] = 'Mexirica' // Substituindo valor
+        
+        console.log('\nArray lista_frutas_2: ')
+        for (let i = 0; i < lista_frutas_2.length; i++) {
+            console.log(lista_frutas_2[i])
+        }
+
+        lista_frutas_2[2] = 'Abacaxi' // Substituindo valor
+
+        console.log('\nArray lista_frutas_2: ')
+        for (let i = 0; i < lista_frutas_2.length; i++) {
+            console.log(lista_frutas_2[i])
+        }
+        
+
+        
+        // Manipulando lista/array
+        let validou = 0
+        let achou = false
+        let numeros_aleatorios = [
+            1, 16, 94, 3, 169,
+            165, 16, 146, 5,
+            49, 215, 1561, 9,
+            15, 145, 5, 94,
+        ]
+        
+        // Printando maior número com for dentro de for com break
+        for (let i = 0; i < numeros_aleatorios.length; i++) {
+            console.log('Verificando se ' + numeros_aleatorios[i] + ' é o maior número')
+
+            for (let j = 0; j < numeros_aleatorios.length; j++) {
+                // Validar se número na posição i é maior que todos os na posição j
+                if (numeros_aleatorios[i] >= numeros_aleatorios[j]) {
+                    validou = (validou + 1)
+                }
+                
+                if (validou == numeros_aleatorios.length) {
+                    console.log('Maior número da lista: ' + numeros_aleatorios[i])
+                    achou = true
+                    break
+                } 
+            }
+            
+            // Parar se achou número, senão reiniciar a contagem
+            if (achou == true) {
+                break
+            } else {
+                validou = 0
+            }
+        }
+
+
+
+
+
+        // Lista dinâmica
+        let array_dinamico = [
+            'Banana',
+            11485961,
+            45.615,
+            '11485961',
+            ('um: ' + 1 + ' dois: ' + 2),
+            true,
+            (5 >= 6),
+            (5 <= 6),
+            ('1' === 1),
+            ('10' !== 10)  
+        ] // Não precisa de vírgula no último item
+
+        console.log('\narray_dinamico: ')
+        for (let i = 0; i < array_dinamico.length; i++) {
+            console.log(typeof array_dinamico[i] + ': ' + array_dinamico[i])
+        }
+        
+        // Excludindo valores do tipo Boolean
+        let lista_filtrada = []
+        for (let i = 0; i < array_dinamico.length; i++) {
+            if (typeof array_dinamico[i] !== 'boolean') {
+                lista_filtrada.push(array_dinamico[i]);
+            }
+        }
+        
+        // Mostrar filtros
+        console.log('\narray_dinamico após filtro: ')
+        for (let i = 0; i < lista_filtrada.length; i++) {
+            console.log(typeof lista_filtrada[i] + ': ' + lista_filtrada[i])
+        }
+        
+        
+        
+        
+        
+        // Loop inverso
+        console.log('\nInversão:')
+        let array_contrario = [1, 2, 3, 4, 5]
+        let tamanho_list = array_contrario.length
+
+        for (let i = tamanho_list; i >= 0; i--) {
+            console.log(array_contrario[i])
+        }
+        
+    </script>
+</body>
+</html>
+
+

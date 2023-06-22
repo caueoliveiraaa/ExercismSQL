@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+        // Ler dados
+        let dia = parseInt(prompt('Informe o dia: '))
+        let dia_nome
+        
+        // Escolher baseado no dia como número
+        switch (dia) {
+            case 0:
+                dia_nome = 'Domingo'
+                break
+
+            case 1:
+                dia_nome = 'Segunda-feira'
+                break
+
+            case 2:
+                dia_nome = 'Terça-feira'
+                break
+
+            case 3:
+                dia_nome = 'Quarta-feira'
+                break
+
+            case 4:
+                dia_nome = 'Quinta-feira'
+                break
+
+            case 5:
+                dia_nome = 'Sexta-feira'
+                break
+
+            case 6:
+                dia_nome = 'Sábado'
+                break
+                
+            default:
+                dia_nome = 'Input inválido'
+        }
+
+        // Validar o dia informado
+        if (dia >= 0 && dia <= 6) {
+            console.log('O número ' + dia + ' corresponde ao dia ' + dia_nome)
+
+        } else {
+            console.log('O número ' + dia + ' não corresponde a nenhum dia da semana. ' + dia_nome)
+            
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,19 @@
+a - O usuário irá informar um número, em seguida realizar a tabuada daquele
+número.
+
+b - O usuário informa um número inicial e um número final, em seguida retorne a
+quantidade de pares e ímpares daquela cadeia de valores.
+Vamos supor que os números informados foram: 6 e 12, sendo assim serão 4
+pares (6, 8, 10 e 12) e 3 ímpares (7, 9 e 11).
+
+c - Crie um pequeno sistema de votação, exiba em um prompt() as opções:
+    1 - Alessandra
+    2 - Caio
+    3 - Geraldo
+    4 - Talita
+    5 - Sair
+    
+Enquanto não for digitado o número 5 o laço deverá realizar a ação de
+prompt() para pedir o voto e contabilizar para o candidato. Quando
+informado o número 5 retorne a quantidade de votos que cada candidato
+obteve.
