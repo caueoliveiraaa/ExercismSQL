@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Variáveis</title>
 </head>
 <body>
     <script>
@@ -15,10 +16,10 @@
         // Evitar nomes muito curtos e muito longos, eles dever ser ao ponto e descritivos
 
         // Declaração e atribuição de variáveis usando let (block scope)
-        let inteiro = 10  // int
-        let booleano = true  // bool
-        let quebrado = 55.5  // float
-        let texto = "João" // str
+        let inteiro = 10
+        let texto = "João"
+        let booleano = true
+        let quebrado = 55.5
 
         // Declaração e atribuição de variáveis usando var (global scope)
         var numero = 154
@@ -28,21 +29,37 @@
 
         // Declaração de variável constante usando const
         const PI = 3.14
-        const cpf = '65151561651'
 
+
+
+
+        
         // Tipagem
-        console.log('\nTipos de dados: ')
+        console.log("\nTipos de dados: ")
         console.log(typeof inteiro)
         console.log(typeof texto)
         console.log(typeof booleano)
         console.log(typeof quebrado)
-        console.log(typeof PI) 
+        console.log(typeof PI)
+
+        // Impressão das variáveis
+        console.log("\nVariáveis:")
+        console.log("Inteiro:", inteiro)
+        console.log("Texto:", texto)
+        console.log("Booleano:", booleano)
+        console.log("Quebrado:", quebrado)
+        console.log("Número:", numero)
+        console.log("String:", string)
+        console.log("Bool:", bool)
+        console.log("Float:", float)
+        console.log("PI:", PI)
 
         // Concatenação de strings
-        let saudacao = 'Olá, ' + texto + '!' + ' Seja bem vinto(a) ' + string + '!'
-        console.log('\nConcatenação: ' + saudacao)
+        let saudacao = "Olá, " + texto + "!" + " Seja bem vinto(a) " + string + "!"
+        console.log("\nConcatenação: ", saudacao)
 
-        
+
+
 
 
         // Operações com tipos numéricos
@@ -50,8 +67,8 @@
         let resultado_2 = numero - 10
         let resultado_3 = numero * 3
         let resultado_4 = numero / 5
-        let resultado_5 = numero % 6
-        
+        let resultado_5 = numero % 5
+
         // Operações
         console.log('\nOperações com tipos numéricos:')
         console.log('Resultado1: ', resultado_1)
@@ -59,6 +76,9 @@
         console.log('Resultado3: ', resultado_3)
         console.log('Resultado4: ', resultado_4)
         console.log('Resultado5: ', resultado_5)
+        
+
+
 
 
         // Porcentagem
@@ -67,50 +87,49 @@
         let juros = preco * 0.1  // 10% de juros
 
         // Aplicando juros e desconto
-        let valor_com_desconto = preco - desconto
-        let valor_com_juros = preco + juros
-
-        console.log('\nPreço = ' + preco)
-        console.log('Preço com desconto = ' + valor_com_desconto)
-        console.log('Preço com juros = ' + valor_com_juros)
+        let valor_final_1 = preco - desconto
+        let valor_final_2 = preco + juros
+        
+        console.log('\nDesconto = ', valor_final_1)
+        console.log('Juros = ', valor_final_2)
         
 
 
 
-        // Módulo %
+
+        // Módulo
         let num_1 = 1
         let num_2 = 2
 
-        console.log(num_1 + ' é ímpar : ' + ((num_1 % 2) !== 0))
-        console.log(num_1 + ' é par: ' + ((num_1 % 2) === 0))
-        console.log(num_2 + ' é ímpar : ' + ((num_2 % 2) !== 0))
-        console.log(num_2 + ' é par: ' + ((num_2 % 2) === 0))
-
-
-
+        console.log(num_1, ' é par: ', (num_1 % 2 === 0))
+        console.log(num_2, ' é par: ', (num_2 % 2 === 0))
 
         // Reduzindo casas com .toFixed()
         let valor_longo = 10.4522856189
 
-        console.log('\nValor longo ' + valor_longo)
+        console.log('Valor longo ' + valor_longo)
         console.log('valor longo + toFixed: ' + valor_longo.toFixed(2))
+        
+
 
 
 
         // Calcular média com duas notas
         let nota_1 = 7
         let nota_2 = 9
-
-        let media_1 = (nota_1 + nota_2) / 2
-        console.log('Média de ' + nota_1 + ' e ' + nota_2 + ' é: ' + media_1.toFixed(2))
-
+        let media = (nota_1 + nota_2) / 2
+        
+        console.log('Média de ' + nota_1 + ' e ' + nota_2 + ' é: ' + media.toFixed(2))
+        
         // Calcular média com três notas
         let nota_3 = 6
         let nota_4 = 7
         let nota_5 = 9
-
         let media_2 = (nota_3 + nota_4 + nota_5) / 3
+        
         console.log('Média (2) de ' + nota_3 + ' e ' + nota_4 + ' e ' + nota_5 + ' é: ' + media_2.toFixed(2))
     </script>
 </body>
 </html>
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+</head>
+<body>
+    <script>
+        // Verificando tipo das variáveis
+        let variavel_nome = 'Python'
+        let variavel_numero = 151530321
+        let variavel_sao_maiories = (10 > 9) && (100 > 99)
+
+        if (typeof variavel_nome === 'string') {
+            console.log(variavel_nome + ' é do tipo ' + typeof variavel_nome)
+        }
+        
+        if (typeof variavel_numero === 'number') {
+            console.log(variavel_numero + ' é do tipo ' + typeof variavel_numero)
+        }
+        
+        if (typeof variavel_sao_maiories === 'boolean') {
+            console.log(variavel_sao_maiories + ' é do tipo ' + typeof variavel_sao_maiories)
+        } 
+
+
+
+
+
+        // Ler dados
+        let numero_1 = parseInt(prompt('Informe o primeiro número '))
+        let numero_2 = parseInt(prompt('Informe o segundo número: '))
+
+        // Usando o operadores && (AND) e || (OR) com if
+        if (numero_1 > 0 && numero_2 > 0) {
+            console.log('Amboms números são positivos.')
+
+        } else if (numero_1 > 0 || numero_2 > 0) {
+            console.log('Ao menos um dos números são positivos.')
+
+        } else {
+            console.log('Amboms são números negativos.')
+
+        }
+
+        // Usando operador ! (NOT) com if
+        if (!numero_1) {
+            console.log('Variável numero1 detém valor false.')
+
+        } else {
+            console.log('Variável numero1 detém valor true.')
+
+        }
+
+        // Ler dados pela segunda vez
+        let numero_3 = parseInt(prompt('Entre o primeiro número: '))
+        let numero4 = parseInt(prompt('Entre o segundo número: '))
+        
+        // Operadores relacionais  >   <   ==   ===  com if
+        if (numero_3 < numero4) {
+            console.log(numero_3 + ' é menor que ' + numero4)
+
+        } else if (numero_3 > numero4) {
+            console.log(numero_3 + ' é maior que ' + numero4)
+
+        } else if (numero_3 === numero4) {
+            console.log(numero_3 + ' é igual a ' + numero4 + ' em valor e tipo')
+
+        } else if (numero_3 == numero4){
+            console.log(numero_3 + ' é igual a ' + numero4)
+
+        } else {
+            console.log('Input inválido!')
+        }
+        
+        // Ler dados mais uma vez
+        let numero_5 = parseInt(prompt('Entre o primeiro número outra vez: '))
+        let numero_6 = parseInt(prompt('Entre o segundo número outra vez: '))
+        let variavel_str = prompt('Entre com uma string: ')
+        
+        // Operadores relacionais  >=   =<   !=   !==  com if
+        if (numero_5 <= numero_6) {
+            console.log(numero_5 + ' é menor ou igual a ' + numero_6)
+
+        } else if (numero_5 >= numero_6) {
+            console.log(numero_5 + ' é maior ou igual ' + numero_6)
+
+        } 
+        
+        if (numero_5 != numero_6) {
+            console.log(numero_5 + ' é diferente de ' + numero_6)
+
+        } else {
+            console.log(numero_5 + ' é igual a ' + numero_6)
+
+        }
+        
+        if (numero_5 !== variavel_str){
+            console.log(numero_5 + ' é de tipo diferente de ' + variavel_str)
+        }
+        
+        // Verificar se input é válido (Not-a-Number)
+        if (isNaN(numero_1) || isNaN(numero_2)) {
+            console.error('Entre números válidos!')
+        } 
+        
+        // Ler dados pela última vez
+        let numero_7 = parseInt(prompt('Entre o primeiro número outra vez: '))
+        let numero_8 = parseInt(prompt('Entre o segundo número outra vez: '))
+
+        // Ifs Aninhados
+        if (numero_7 == numero_8) {
+            console.log('Números iguais!')
+
+            if (numero_7 === numero_8) {
+                console.log('Números iguais em tipo também!')
+
+            }
+
+        } else {
+
+            if (numero_7 > numero_8) {
+                console.log('Número ' + numero_7 + ' é maior que ' + numero_8)
+
+            } else if (numero_7 < numero_8) {
+                console.log('Número ' + numero_7 + ' é menor que ' + numero_8)
+
+            }
+            
+            if (numero_7 === numero_8) {
+                console.log('Números iguais em tipo!')
+
+            } else {
+                console.log('Números diferentes em tipo!')
+            }
+        }
+    </script>
+</body>
+</html>
+
+
