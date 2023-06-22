@@ -1,6 +1,6 @@
 Guia de estudos:
-    - Rescreva exemplos e exercícios repositório no github do professor;
+    - Rescreva exemplos e exercícios do repositório do professor;
     - Resolva por dia quantos exercícios for possível;
     - Verifique os exercícios comparando com os do professor;
     - Teste todos os programas antes de dar um push para o github;
-    - Comite código e resolva um exercício por dia, manipulando seu ambiente pelo terminal ;
+    - Comite código e resolva um exercício por dia, manipulando seu ambiente pelo terminal para manter a prática;
