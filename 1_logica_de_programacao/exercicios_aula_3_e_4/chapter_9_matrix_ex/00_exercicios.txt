@@ -1,0 +1,11 @@
+a - Crie uma matriz 3x3, onde a primeira coluna terá o nome de um produto, a segunda
+coluna a marca e a terceira o valor. Esses dados não precisam ser informados pelo
+usuário, essas informações podem ser pré-definidas como no exemplo de contatos,
+assim que desenvolver a matriz, exiba os dados utilizando laços de repetição.
+
+b - Implemente uma matriz 3x2, na primeira coluna serão armazenados nomes de
+cursos, já na segunda coluna os valores. O cliente irá informar três cursos e três
+valores, em seguida exiba todos os cursos e valores.
+
+c - Crie uma matriz 4x4 e peça para o usuário informar 16 números. Quando informados
+os 16 números, exiba cada um deles, além da soma e a média dos valores.
