@@ -1,5 +1,5 @@
 a - O usuário informa uma temperatura, em seguida poderá selecionar o tipo de
-conversão (Celsius e Fahrenheit).
+conversão (Celsius e Fahrenheit). (SWITCH)
 
 b - Crie um conversor de moedas. Será informado o valor e as conversões:
     Real para Dólar: real / 5.25
@@ -10,7 +10,7 @@ b - Crie um conversor de moedas. Será informado o valor e as conversões:
 c - O usuário informa o nome de um produto, valor e segmento (vestuário,
 eletrônico ou alimentício). Se o segmento for vestuário será dado 5% de
 desconto sobre o valor do produto, caso eletrônico 8% e alimentício 10%.
-(Usando Switch)
+(Usando IF)
 
 d - Crie um sistema de votação para três candidatos. O eleitor poderá selecionar
 um dos três nomes, em seguida será contabilizado o voto para o candidato.

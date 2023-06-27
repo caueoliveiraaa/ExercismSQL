@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let dia_nome = ''
+        let dia_numero = parseInt(prompt('Informe o dia: '))
+
+        switch (dia_numero) {
+            case 0:
+                dia_nome = 'Domingo'
+                break
+
+            case 1:
+                dia_nome = 'Segunda-feira'
+                break
+
+            case 2:
+                dia_nome = 'Terça-feira'
+                break
+
+            case 3:
+                dia_nome = 'Quarta-feira'
+                break
+
+            case 4:
+                dia_nome = 'Quinta-feira'
+                break
+
+            case 5:
+                dia_nome = 'Sexta-feira'
+                break
+
+            case 6:
+                dia_nome = 'Sábado'
+                break
+                
+            default:
+                dia_nome = 'Input inválido'
+        }
+
+        // Validar o dia informado
+        if (dia_numero >= 0 && dia_numero <= 6) {
+            console.log(
+                'O número ' +
+                dia_numero +
+                ' corresponde ao dia ' +
+                dia_nome
+                )
+        } else {
+            console.log(
+                'O número ' +
+                dia_numero +
+                ' não corresponde a nenhum dia da semana. '
+            )
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let indice = 1
+        // while (indice <= 10) {
+        //     alert('Indice ' + indice)
+        //     indice++ // Incrementando
+        // }
+
+        // let indice_2 = 10
+        // while (indice_2 >= 0) {
+        //     alert('Indice ' + indice_2)
+        //     indice_2-- // Decrementando
+        // }
+
+
+        let numero = parseInt(prompt('Informe um número: '))
+
+        if (numero > 0) {
+
+            // Se maior que 50
+            if (numero > 50) {
+                // Vamos adicionar ate 100
+
+                while (numero <= 100) {
+                    console.log(numero)
+                    numero++
+                }
+
+
+            // Se menor ou igual a 50
+            } else if (numero <= 50) {
+                // Vamos diminuit ate 0
+
+                while (numero >= 0) {
+                    console.log(numero)
+                    numero--
+                }
+            }
+        }
+
+        // Parando loop manualmente
+        let comando = ''
+        let rodar_loop = true
+        while (rodar_loop == true) {
+            comando = prompt(
+                'Informe qualquer valor para continuar e 0 para parar: '
+            )
+            
+            if (comando == '0') {
+                console.log('Parou loop!')
+                rodar_loop = false
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

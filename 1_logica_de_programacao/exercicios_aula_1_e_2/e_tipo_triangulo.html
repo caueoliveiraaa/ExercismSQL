@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // E - O usuário deverá informar a largura de cada lado de um triângulo, peça as
+        // três larguras (direito, inferior e esquerdo) e verifique o tipo de triângulo. Os
+        // tipos e triângulos são:
+        // Tipo Especificação:
+        // Isósceles Dois lados iguais e um diferente
+        // Escaleno Três lados diferentes
+        // Equilátero Três lados iguai        
+
+        let mensagem = ''  // string
+
+        // Solicitando as larguras dos lados do triângulo ao usuário
+        let direita = parseFloat(prompt('Digite a largura do lado direito do triângulo:'))
+        let inferior = parseFloat(prompt('Digite a largura do lado inferior do triângulo:'))
+        let esquerda = parseFloat(prompt('Digite a largura do lado esquerdo do triângulo:'))
+
+        // Verificando o tipo de triângulo
+        if (direita === inferior && inferior === esquerda) {
+            mensagem = 'Triângulo Equilátero'
+        } else if (direita !== inferior && inferior !== esquerda && direita !== esquerda) {
+            mensagem = 'Triângulo Escaleno'
+        } else {
+            mensagem = 'Triângulo Isósceles'
+        }
+
+        console.info(mensagem)   // Informando tipo do triângulo
+    </script>
+</body>
+</html>
