@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Switch</title>
 </head>
 <body>
-    
     <script>
-        let dia_nome = ''
-        let dia_numero = parseInt(prompt('Informe o dia: '))
-
-        switch (dia_numero) {
+        // Ler dia
+        let dia = parseInt(prompt('Informe o dia: '))
+        let dia_nome
+        
+        // Escolher baseado no dia como número
+        switch (dia) {
             case 0:
                 dia_nome = 'Domingo'
                 break
@@ -45,22 +47,13 @@
         }
 
         // Validar o dia informado
-        if (dia_numero >= 0 && dia_numero <= 6) {
-            console.log(
-                'O número ' +
-                dia_numero +
-                ' corresponde ao dia ' +
-                dia_nome
-                )
+        if (dia >= 0 && dia <= 6) {
+            console.log('O número ' + dia + ' corresponde ao dia ' + dia_nome)
         } else {
-            console.log(
-                'O número ' +
-                dia_numero +
-                ' não corresponde a nenhum dia da semana. '
-            )
+            console.log('O número ' + dia + ' não corresponde a nenhum dia da semana. ' + dia_nome)
         }
-
     </script>
-
 </body>
 </html>
+
+
