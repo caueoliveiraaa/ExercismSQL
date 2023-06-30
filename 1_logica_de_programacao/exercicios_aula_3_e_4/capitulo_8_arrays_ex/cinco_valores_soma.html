@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        // Desenvolva um sistema que o usuário informa cinco números
+        // através do comando prompt, em seguida 
+        // exiba os valores informados e mostre a soma desses valores.
+
+        let numeros = []
+        let soma = 0
+        let contador = 0
+
+        // ler os cinco números e armazenar em uma lista com prompt e while
+        while (contador < 5) {
+            // Ler os numeros do usuario
+            let numero_usuario = parseInt(prompt('Informe o ' + (contador + 1) + 'º numero'))            
+            
+            // Somar a variavel somar
+            soma = (soma + numero_usuario)
+            
+            // Adicionar o nuemro a nossa lista
+            numeros.push(numero_usuario)
+
+            // Incrementando a variavel contador para 
+            // parar o loop quando chegar no 5
+            contador++
+        }
+
+        // mostrar a soma dos valores
+        alert('A soma de todos os item eh ' + soma)
+        alert('Os itens da lista sao ' + numeros)
+    </script>
+</body>
+</html>
+
+

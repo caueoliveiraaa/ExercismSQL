@@ -2,12 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Votação</title>
 </head>
 <body>
     <script>
+        // Crie um pequeno sistema de votação, exiba em um prompt() as opções:
+        // 1 - Alessandra
+        // 2 - Caio
+        // 3 - Geraldo
+        // 4 - Talita
+        // 5 - Sair
+        
+        // Enquanto não for digitado o número 5 o laço deverá realizar a ação de
+        // prompt() para pedir o voto e contabilizar para o candidato. Quando
+        // informado o número 5 retorne a quantidade de votos que cada candidato
+        // obteve.
+        
 
+        let votos_alessandra = 0          
+        let votos_caio = 0 
+        let votos_geraldo = 0
+        let votosTalita = 0
+        let opcao = 0
+
+        // Criando mensagem prompt
+        let prompt_message = 'Digite o número correspondente ao candidato:'
+        // Incrementando string
+        prompt_message = prompt_message + '\n1) - Alessandra'
+        prompt_message = prompt_message + '\n2) - Caio '
+        prompt_message = prompt_message + '\n3) - Geraldo'
+        prompt_message = prompt_message + '\n4) - Talita'
+        prompt_message = prompt_message + '\n5) - Parar'
+
+        do {
+            opcao = parseInt(prompt(prompt_message))
+
+            if (opcao === 1) {
+                votos_alessandra++
+
+            } else if (opcao === 2) {
+                votos_caio++
+
+            } else if (opcao === 3) {
+                votos_geraldo++
+
+            } else if (opcao === 4) {
+                votosTalita++
+
+            }
+        } while (opcao !== 5)
+
+        console.log('Resultado da votação:')
+        console.log('1) - Alessandra: ' + votos_alessandra + ' votos.')
+        console.log('2) - Caio: ' + votos_caio + ' votos.')
+        console.log('3) - Geraldo: ' + votos_geraldo + ' votos.')
+        console.log('4) - Talita: ' + votosTalita + ' votos.')
     </script>
 </body>
 </html>
+
+

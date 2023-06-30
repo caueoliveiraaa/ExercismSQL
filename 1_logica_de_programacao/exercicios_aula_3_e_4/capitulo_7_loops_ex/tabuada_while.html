@@ -2,12 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabuada</title>
 </head>
 <body>
     <script>
+        // O usuário informa um número inicial e um número final, em seguida retorne a
+        // quantidade de pares e ímpares daquela cadeia de valores.
+        // Vamos supor que os números informados foram: 6 e 12, sendo assim serão 4
+        // pares (6, 8, 10 e 12) e 3 ímpares (7, 9 e 11).
 
+        // Ler números
+        let numero_inicial = parseInt(prompt('Informe o número inicial:'))
+        let numero_final = parseInt(prompt('Informe o número final:'))
+        let impares = 0
+        let pares = 0
+        
+        // Incrementar ímpares e pares
+        while (numero_inicial <= numero_final) {
+            if (numero_inicial % 2 === 0) {
+                pares++
+
+            } else {
+                impares++
+
+            }
+            numero_inicial++
+        }
+        
+        // Mostrar a quantidade final de ambos
+        console.log('Quantidade de pares: ' + pares)
+        console.log('Quantidade de ímpares: ' + impares)
     </script>
 </body>
 </html>
+
+

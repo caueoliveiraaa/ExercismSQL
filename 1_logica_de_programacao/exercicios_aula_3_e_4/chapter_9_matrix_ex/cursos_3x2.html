@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de programação</title>
+</head>
+<body>
+    <script>
+        // b - Implemente uma matriz 3x2, na primeira coluna serão
+        // armazenados nomes de
+        // cursos, já na segunda coluna os valores.
+        // O cliente irá informar três cursos e três
+        // valores, em seguida exiba todos os cursos e valores.
+        
+        // Lista para armazenar dados
+        let matriz = [] 
+
+        // for loop para armazenar os valores dentro da matriz
+        for (let i = 0; i < 3; i++) {
+            // Pedir dados ao usuario
+            let curso = prompt('Informe o curso') 
+            let valor = prompt('Informe o valor para o curso')
+
+            // Criar sublista
+            let sublista = [curso, valor]
+
+            // Adiconar sublista dentro da lista
+            matriz.push(sublista)
+        }
+
+        // Mostrar todos os itens
+        for (let i = 0; i < matriz.lenght; i++) {
+            alert('Curso ' + matriz[i][0] + ' - Valor ' + matriz[i][1])
+        }
+    </script>
+</body>
+</html>

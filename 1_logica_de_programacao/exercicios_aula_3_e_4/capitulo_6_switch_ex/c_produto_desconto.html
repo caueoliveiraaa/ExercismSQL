@@ -2,41 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Switch</title>
 </head>
 <body>
     <script>
-        // c - O usuário informa o nome de um produto, valor e segmento (vestuário,
-        // eletrônico ou alimentício). Se o segmento for vestuário será dado 5% de
-        // desconto sobre o valor do produto, caso eletrônico 8% e alimentício 10%.
-        // (Usando IF)
+        // O usuário informa o nome de um produto, valor e segmento (vestuário, eletrônico ou alimentício).
+        // Se o segmento for vestuário será dado 5% de desconto sobre o valor do produto,
+        // caso eletrônico 8% e alimentício 10% 
+        // (Usando Switch e depois com IF)
 
-        // Precisamos da variavel nome do protudo
-        // Precisamos da variavel valor
-        // Precisamos da variavel segmento (vestuário, eletrônico ou alimentício)
-        // Precisamos da variavel desconto
+        // Solicitar o nome do produto, valor e segmento ao usuário
+        let nome_produto = prompt('Digite o nome do produto:')
+        let valor_produto = parseFloat(prompt('Digite o valor do produto:'))
+        let segmento = prompt('Digite o segmento (vestuário, eletrônico ou alimentício):')
+        let desconto = 0
 
-        
-        // Verificar com if qual desconto aplicar para qual produto/segmento
+        segmento = segmento.toLowerCase()  // Usar lowercase
 
-            // Se o produto eh vestuario - if
-                // Block 1
-                // Ajustar o desconto
-                
-            // Caso seja eletronico - else if
-                // Bloco 2
-                // Ajustar o desconto
-                
-            // Caso seja alimenticio - else if
-                // Bloco 3
-                // Ajustar o desconto
-            
-        
-        // Realizar o calculo do desconto 
+        // Remover acentos  
+        if (segmento === 'vestuário') {
+            segmento = 'vestuario'
+        } else if (segmento === 'eletrônico') {
+            segmento = 'eletronico'
+        } else if (segmento === 'alimentício'){
+            segmento = 'alimenticio'
+        }
 
-        // Mostrar o resultado final
+        // Aplicar  o desconto com base no segmento utilizando a estrutura switch case
+        switch (segmento) {
+            case 'vestuario':
+                desconto = 0.05 // vestuário 5% 
+                break
 
+            case 'eletronico':
+                desconto = 0.08  // eletrônico 8%
+                break
+
+            case 'alimenticio':
+                desconto = 0.1  // alimentício 10%
+                break
+
+            default:
+                console.log('Segmento inválido.')
+        }
+
+        // Calcular o valor com desconto
+        let valor_com_desconto = valor_produto - (valor_produto * desconto)
+
+        // Printar o resultado com o valor final
+        console.log('Nome do Produto: ' + nome_produto)
+        console.log('Valor Original: R$' + valor_produto.toFixed(2))
+        console.log('Segmento: ' + segmento)
+        console.log('Desconto: ' + (desconto * 100) + '%')
+        console.log('Valor com Desconto: R$' + valor_com_desconto.toFixed(2))
     </script>
 </body>
 </html>
+
+

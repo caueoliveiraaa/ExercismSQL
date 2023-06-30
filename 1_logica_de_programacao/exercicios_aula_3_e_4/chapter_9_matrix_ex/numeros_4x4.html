@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de programação</title>
+</head>
+<body>
+    <script>
+        // c - Crie uma matriz 4x4 e peça para o usuário informar 16 números.
+        // Quando informados
+        // os 16 números, exiba cada um deles,
+        // além da soma e a média dos valores.
+
+        let matriz = []
+
+        // for para as linhas
+        for (let i = 0; i < 4; i++) {
+            // Sublista para armazenar sublistas com 4 valores
+            // na matriz principal
+            let sublista = []
+            
+            // for para as colunas
+            for (let j = 0; j < 4; j++) {
+                // Pedir os numeros com prompt
+                let nuemro = prompt('Informe o valor para linha ' + i + ' coluna ' + j + ':')
+                sublista.push(nuemro)
+            }
+            matriz.push(sublista)
+        }
+
+        // For para as linhas
+        for (let i = 0; i < 4; i++) {
+            // For para colunas
+            for (let j = 0; j < 4; j++) {
+                alert('Linha ' + i + ' coluna ' + j + ' item = ' + matriz[i][j])
+            }
+        }
+
+       
+    </script>
+</body>
+</html>

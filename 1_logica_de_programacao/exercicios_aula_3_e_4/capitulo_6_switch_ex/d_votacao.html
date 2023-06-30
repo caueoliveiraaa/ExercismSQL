@@ -2,15 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Switch</title>
 </head>
 <body>
-
     <script>
-        
-    </script>
+        // Crie um sistema de votação para três candidatos. O eleitor poderá selecionar um dos três nomes,
+        // em seguida será contabilizado o voto para o candidato.
 
-    
+        let candidatoA = 0
+        let candidatoB = 0
+        let candidatoC = 0
+        let candidato = 0
+
+        while (candidato != 4) {
+            candidato = prompt('Informe o candidato (A, B ou C) informe 4 para sair: ')
+
+            if (candidato === 'A') {
+                candidatoA++;
+            } else if (candidato === 'B') {
+                candidatoB++;
+            } else if (candidato === 'C') {
+                candidatoC++;
+            } else if (candidato != '4') {
+                alert('Candidato inválido.')
+            }
+
+        }
+
+        alert('Candidato A: ' + candidatoA + ' votos')
+        alert('Candidato B: ' + candidatoB + ' votos')
+        alert('Candidato C: ' + candidatoC + ' votos')
+    </script>
 </body>
 </html>
+
+
