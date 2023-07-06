@@ -15,12 +15,13 @@
             let contador = numero_inicio
 
             while (contador <= numero_final) {
+                if (contador % 2 === 0) {
+                    soma_dos_pares += contador
+                }
+
                 contador++ 
-
-                // se o contador eh par
-                    // soma_dos_pares += contador
-
             }
+
             return soma_dos_pares
         }
 
@@ -28,7 +29,6 @@
         let numero_final = parseInt(prompt('Informe o número final: '))
         let resultado = somar_pares_em_intervalo(numero_inicio, numero_final)
         alert('A soma dos pares é: ' + resultado)
-
     </script>
 </body>
 </html>
