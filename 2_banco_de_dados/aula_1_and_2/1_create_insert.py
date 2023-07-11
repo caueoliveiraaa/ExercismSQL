@@ -86,3 +86,10 @@ cursor.execute(f'''
 ''')
 
 print('Dados inseridos com sucesso!')
+
+# Compactar nossas mudanças, para então enviar elas ao banco de dados
+conexao.commit()
+print('Comitou dados com sucesso!')
+# Fechar a conexão com a base de dados
+conexao.close()
+print('Conexão fechada com sucesso!')
