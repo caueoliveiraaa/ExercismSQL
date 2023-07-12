@@ -11,7 +11,7 @@
 
   OBS: Tentar ler em inglês se for possível, senão usar um modelo de linguagem como
   o ChatGPT para traduzir parte por parte:
-
-  https://docs.python.org/3/library/sqlite3.html
-  https://pandas.pydata.org/docs/
-  https://www.w3schools.com/python/
+  
+    - https://docs.python.org/3/library/sqlite3.html
+    - https://pandas.pydata.org/docs/
+    - https://www.w3schools.com/python/
