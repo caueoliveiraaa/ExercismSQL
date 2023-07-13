@@ -37,31 +37,61 @@ while True:
 
     elif operacao == '2':
         # Ler id da coluna a deletar
+        id_linha = input('Informe o ID da coluna a deletar: ')             
+        id_linha = int(id_linha)
+        os.system('cls')
 
-        # Executar o código SQL
+        cursor.execute(f'''
+            DELETE FROM usuarios 
+            WHERE id = {id_linha};
+        ''')
 
-        # Printar mensagem de sucesso para quando deletar
-
-        ...
+        print(f'Linha {id_linha} excluída com sucesso!')
 
     elif operacao == '3':
-        # Ler o id da coluna a modificar
+        # Ler id da coluna a atualizar
+        id_linha = input('Informe o ID da coluna a alterar: ')             
+        
+        os.system('cls')
+        id_linha = int(id_linha)
 
-        # Executar o código SQL
+        # Ler os dados novos
+        nome_novo = input('Informe o novo nome do usuário: ')             
+        email_novo = input('Informe o novo e-mail do usuário: ')             
+        idade_nova = input('Informe a nova idade do usuário: ')             
+        idade_nova = int(idade_nova)
 
-        # Printar mensagem de sucesso para quando deletar
-        ...
+        # Validar os dados e inserir os mesmos caso sejam válidos
+        if len(nome_novo) > 3 and idade_nova > 0 and '@' in email_novo:
+            cursor.execute(f"""
+                UPDATE usuarios 
+                SET nome = '{nome_novo}', idade = {idade_nova}, email = '{email_novo}' 
+                WHERE id = {id_linha};
+            """)
+            
+            print(f'Dados atualizados com sucesso em id = {id_linha}!')
+        else:
+            print('Informe dados válidos para serem atualizados!')
 
     elif operacao == '4':
         # Ler os dados novos
+        nome_novo = input('Informe o nome do usuário: ')             
+        email_novo = input('Informe o e-mail do usuário: ')             
+        idade_nova = input('Informe a idade do usuário: ')             
+        
+        os.system('cls')
+        idade_nova = int(idade_nova)
 
-        # Validar os dados
-
-        # Se válidos, vamos inserir na base de dados
-
-        # Senão, mostrar mensagem de erro ao usuário
-
-        ...
+        # Validar os dados e inserir os mesmos caso sejam válidos
+        if len(nome_novo) > 3 and idade_nova > 0 and '@' in email_novo:
+            cursor.execute(f"""
+                INSERT INTO usuarios (nome, idade, email)
+                VALUES ('{nome_novo}', {idade_nova}, '{email_novo}');
+            """)
+            
+            print(f'Dados {nome_novo}, {idade_nova}, e {email_novo} inseridos com sucesso!')
+        else:
+            print('Informe dados válidos para serem inseridos!')
     elif operacao == '5':
         print('Laço de repetição parado com sucesso!')
         break
