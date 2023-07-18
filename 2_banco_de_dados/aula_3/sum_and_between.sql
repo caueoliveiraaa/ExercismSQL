@@ -20,7 +20,6 @@ SELECT *FROM Programadores
 WHERE idade BETWEEN 10 AND 23;
 
 
-
 -- # Exercícios:
 
 -- OBS: Se o exercício pedir por dados que ainda não existem, inserir os mesmos.

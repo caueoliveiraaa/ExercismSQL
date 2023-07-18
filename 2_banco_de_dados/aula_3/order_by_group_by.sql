@@ -126,20 +126,11 @@ FROM Programadores
 WHERE idade > 18
 GROUP BY idade;
 
-SELECT COUNT(linguagem_de_programacao) AS total_python 
+SELECT COUNT(linguagem_de_programacao) AS total_python
 FROM Programadores
 WHERE linguagem_de_programacao = 'Java'
 GROUP BY linguagem_de_programacao;
 
-alter table Programadores
-add column salario_dev NUMERIC;
-
-alter table Programadores
-drop column salario_dev;
-
-update Programadores
-set salario_dev = 5.520
-where id = 1; 
 
 
 --  |--##-- EX: --##--|
