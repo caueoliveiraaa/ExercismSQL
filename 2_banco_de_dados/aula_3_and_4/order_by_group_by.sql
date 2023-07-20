@@ -1,4 +1,4 @@
--- database: c:\Users\Leôncio Cauê\Desktop\apex_python_junho_2023\2_banco_de_dados\aula_3\mydatabase.db
+-- database: c:\Users\Leôncio Cauê\Desktop\apex_python_junho_2023\2_banco_de_dados\aula_3_and_4\mydatabase.db
 
 CREATE TABLE IF NOT EXISTS Programadores (
     id INTEGER PRIMARY KEY,
