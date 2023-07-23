@@ -1,4 +1,0 @@
-Documentações e exemplos de várias linguagens de programação =>  https://www.w3schools.com/
-Lógica com JS =>  https://medium.com/trainingcenter/introdu%C3%A7%C3%A3o-a-l%C3%B3gica-de-programa%C3%A7%C3%A3o-com-javascript-77d98de468c3
-HTML básico => https://www.devmedia.com.br/html-basico-codigos-html/16596
-Operadores lógicos =>  https://celsokitamura.com.br/operadores-relacionais-e-logicos-em-javascript/
