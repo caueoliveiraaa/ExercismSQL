@@ -84,3 +84,32 @@
 	Use um acumulador para calcular a soma das notas e, ao final do loop, divida pela quantidade de notas para obter a média.
 	Use uma estrutura condicional (if-else) para verificar se o aluno foi aprovado ou reprovado com base na média calculada.
 	Certifique-se de converter os valores digitados pelo usuário para o tipo adequado (int ou float) ao armazená-los na lista.
+
+# Exercício 19:
+    Escrever uma função que solicita ao usuário uma senha e verifica se ela atende a alguns critérios de segurança.
+    Usar laço de repetição para rodar até uma senha válida ser informada e a mesma ser informada duas vezes de
+    forma identica para confirmação da senha.
+    Critérios de segurança:
+    A senha deve conter pelo menos 8 caracteres.
+    A senha deve conter pelo menos uma letra maiúscula e uma letra minúscula.
+    A senha deve conter pelo menos um número.
+
+# Exercício 20:
+    Crie uma função que solicita ao usuário um endereço de e-mail e verifica se ele é válido.
+    O loop deve apenas para quando um e-mail válido for informado. Mostrar mensagem de finalização.
+    Critérios de validação:
+    O e-mail deve conter um único símbolo '@'.
+    O e-mail deve conter pelo menos um '.' após o símbolo '@'.
+    O e-mail não deve conter espaços em branco.
+
+# Exercício 21:
+    Objetivo: Escrever um programa que solicita ao usuário sua data de nascimento e verifica se ela é válida.
+    Critérios de validação:
+    O formato da data de nascimento deve ser "dd/mm/aaaa".
+    O dia deve estar entre 1 e 31.
+    O mês deve estar entre 1 e 12.
+    O ano deve estar entre 1900 e o ano atual.
+
+# Exercício 21:
+    Crie uma função para gerenciar os pedidos de um restaurante.
+    O programa deve permitir que o usuário adicione novos pedidos, remova pedidos prontos e exiba os pedidos pendentes.
