@@ -110,6 +110,6 @@
     O mês deve estar entre 1 e 12.
     O ano deve estar entre 1900 e o ano atual.
 
-# Exercício 21:
+# Exercício 22:
     Crie uma função para gerenciar os pedidos de um restaurante.
     O programa deve permitir que o usuário adicione novos pedidos, remova pedidos prontos e exiba os pedidos pendentes.

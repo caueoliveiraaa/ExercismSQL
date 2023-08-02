@@ -4,11 +4,7 @@
 
 import os 
 
-lista = [1, 2, 3]
-print(len(lista))
 
-if len(lista) > 3:
-    print('++3')
 
 
 if __name__ == '__main__':
