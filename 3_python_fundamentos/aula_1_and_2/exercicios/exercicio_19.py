@@ -76,8 +76,9 @@ def receber_senha_valida():
             senha_nova = input('Informe a senha mais uma vez: ')
 
             # validar senhas
+            estrelinha = '*'
             if senha_nova == senha_temporaria:
-                print(f'Senha ******* criada com sucesso!')
+                print(f'Senha {estrelinha * len(senha_nova)} criada com sucesso!')
                 senha_valida = True
             else:
                 print('As senhas não batem! Tente outra vez!')
