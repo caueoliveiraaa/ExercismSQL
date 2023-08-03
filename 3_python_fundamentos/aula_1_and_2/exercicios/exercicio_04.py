@@ -3,7 +3,6 @@
 # regressiva de 5 a 1, com uma pausa de um segundo entre cada número.
 import time
 
-
 def contagem_regressiva_for():
     for numero in range(5, 0, -1):
         print(numero)

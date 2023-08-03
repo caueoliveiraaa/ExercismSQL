@@ -16,6 +16,9 @@ def busque_idade_valida():
     return idade
 
 
+
+
+
 def valida_faixa_etaria(idade):
     if idade > 0 and idade < 150:
         if idade <= 12:
