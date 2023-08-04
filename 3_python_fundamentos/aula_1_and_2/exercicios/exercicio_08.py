@@ -32,7 +32,7 @@ def main():
     dia, mes, ano = recebe_data()
     mostrar_data(dia, mes, ano)
 
-if __name__ == '__main__':
+if __name__ == '__main__':  
     # main()
     print(datetime.now())
     print(datetime.now().second)
@@ -40,5 +40,5 @@ if __name__ == '__main__':
     print(datetime.now().hour)
     print(datetime.now().day)
     print(datetime.now().year)
-    data = datetime.now().strftime('%d/%m/%Y - %H:%M')
+    data = datetime.now().strftime('%d/%sm/%Y - %H:%M')
     print(f'Data string: {data}')
