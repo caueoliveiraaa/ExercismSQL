@@ -49,5 +49,6 @@ class ContaBancaria:
             except:
                 print('Informe uma opção válida!')
 
+
 if __name__ == '__main__':
     ContaBancaria.script()
