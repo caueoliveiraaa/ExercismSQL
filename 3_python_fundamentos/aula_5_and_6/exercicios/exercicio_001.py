@@ -79,6 +79,8 @@ class Gato(Animal):
         print(f'Cor {self.cor}')
         print(f'Idade {self.idade}')
 
+
+
 if __name__ == '__main__':
     cavalo_1 = Cavalo(
         especie='Machador',
