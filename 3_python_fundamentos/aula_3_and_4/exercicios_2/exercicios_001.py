@@ -23,7 +23,6 @@ class Produto:
         self.preco = preco_novo
 
 
-
 if __name__ == '__main__':
     carro_objeto = Produto('Gol', 2000.00, 1561145156)
     print(carro_objeto.nome)
