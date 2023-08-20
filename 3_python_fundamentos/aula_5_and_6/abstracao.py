@@ -37,9 +37,10 @@ class Artista(PessoaAbstrata):
         print('Eu sou pago até para respirar!')
 
 
-Artista.gastar_dinheiro()
-Atleta.gastar_dinheiro()
-Artista.falar()
-Atleta.falar()
-Artista.respirar()
-Atleta.respirar()
+if __name__ == '__main__':
+    Artista.gastar_dinheiro()
+    Atleta.gastar_dinheiro()
+    Artista.falar()
+    Atleta.falar()
+    Artista.respirar()
+    Atleta.respirar()
