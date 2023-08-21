@@ -14,6 +14,7 @@ class BancoDeDados:
         print('Conexão estabelecida com sucesso.')
         return BancoDeDados.conexao
 
+
     @staticmethod
     def criar_tabela(nome_tabela_nova):
         cursor = BancoDeDados.conexao.cursor()
@@ -30,6 +31,7 @@ class BancoDeDados:
         cursor.execute(sql_string)
         cursor.close()
         print(f'Tabela {nome_tabela_nova} criada com sucesso.')
+
 
     @staticmethod
     def insere_dados(nome_tabela, nome_usuario, numero_usuario, email_usuario):
@@ -48,24 +50,90 @@ class BancoDeDados:
         print(f'inseridos em {nome_tabela} com sucesso.')
 
     @staticmethod
-    def delete_linha(id_linha):
-        pass
+    def delete_linha(id_linha, nome_tabela):
+        cursor = BancoDeDados.conexao.cursor()
 
-        # DELETAR LINHA VIA ID
+        sql_query = f'''
+            select * from {nome_tabela}
+            where id = {id_linha}
+        '''
+
+        cursor.execute(sql_query)
+        dados_banco = cursor.fetchall()
+
+        if len(dados_banco) > 0:
+            sql_delete = f'''
+                delete from {nome_tabela}
+                where id = {id_linha}
+            '''
+
+            cursor.execute(sql_delete)
+            cursor.close()
+            BancoDeDados.conexao.commit()
+            print(f'Linha {id_linha} deletada com sucesso.')
+        else:
+            print(f'Tabela {nome_tabela} com id {id_linha} nao exite.')
+
 
     @staticmethod
     def mostra_tabela(nome_tabela):
-        pass
+        cursor = BancoDeDados.conexao.cursor()
 
-        ### EXTRAIR DADOS DA TABELA
+        slq_query = f'''
+            select * from {nome_tabela}
+        '''
 
-        ### MOSTRAT DADOS COM UM FOR
+        cursor.execute(slq_query)
+        dados_banco = cursor.fetchall()
+
+        if len(dados_banco) > 0:
+            print(f'\n\nDados da tabela {nome_tabela}:\n')
+            for linha in dados_banco:
+                for coluna in linha:
+                    print(coluna, end=' ')
+                print('\n')
+
+            cursor.close()
+        else:
+            print(f'A tabela {nome_tabela} não possui registros.')
+
 
     @staticmethod
-    def atualiza_linha(id_linha, nome_novo, numero_novo, email_novo):
-        pass
+    def atualiza_linha(id_linha, nome_tabela, nome_novo, numero_novo, email_novo):
+        cursor = BancoDeDados.conexao.cursor()
 
-        ### USAR UPDATE PARA ATUALIZAR VIA ID
+        sql_query = f'''
+            select * from {nome_tabela}
+            where id = {id_linha}
+        '''
+
+        cursor.execute(sql_query)
+        dados_banco = cursor.fetchall()
+
+        if len(dados_banco) > 0:
+            sql_update = f"""
+                update {nome_tabela}
+                set nome = '{nome_novo}',
+                numero = '{numero_novo}',
+                email = '{email_novo}'
+                where id = {id_linha}
+            """
+
+            cursor.execute(sql_update)
+            cursor.close()
+            BancoDeDados.conexao.commit()
+            print(f'Linha {id_linha} atualizada com sucesso.')
+        else:
+            print(f'Tabela {nome_tabela} com id {id_linha} nao exite.')
+
+    @staticmethod
+    def valida_colunas_banco(nome, numero, email):
+
+        ##### VALIDA EMAILS =  Precisam ter  @  e  .   em um len de pelo menos 10 
+        ##### VALIDA NOME = Precisa ter tres caracteres e nao pode ter numero
+        ##### VALIDA NUMERO = Só pode numeros e os simbolos:   +    ()    - 
+
+        ...
 
 
 def database_manager():
@@ -96,8 +164,6 @@ Insira a operação (1 - 6): '''
                 numero = input('Informe o número do contato: ')
                 email = input('Informe o e-mail do contato: ')
 
-                #### VERFICAR DADOS COM IFS
-
                 BancoDeDados.insere_dados(
                     nome_tabela=tabela,
                     nome_usuario=nome,
@@ -105,20 +171,29 @@ Insira a operação (1 - 6): '''
                     email_usuario=email
                 )
             elif operacao == 3:
-
-                #### CRIAR LOGICA
-
-                pass
+                tabela = input('Informe o nome da tabela: ')
+                id_linha = input('Informe o id da linha: ')
+                
+                BancoDeDados.delete_linha(
+                    id_linha=id_linha, nome_tabela=tabela
+                )   
             elif operacao == 4:
-
-                #### CRIAR LOGICA
-
-                pass
+                tabela = input('Informe o nome da tabela: ')
+                BancoDeDados.mostra_tabela(tabela)
             elif operacao == 5:
+                tabela = input('Informe o nome da tabela a alterar: ')
+                id_linha = input('Informe o id da linha a alterar: ')
+                nome = input('Informe o novo nome do contato: ')
+                numero = input('Informe o novo número do contato: ')
+                email = input('Informe o nobo e-mail do contato: ')
 
-                #### CRIAR LOGICA
-
-                pass
+                BancoDeDados.atualiza_linha(
+                    id_linha=id_linha,
+                    nome_tabela=tabela,
+                    nome_novo=nome,
+                    numero_novo=numero,
+                    email_novo=email
+                )
             elif operacao == 6:
                 print('Programa encerrado.')
                 break
@@ -132,7 +207,7 @@ Insira a operação (1 - 6): '''
 
     conn.close()
     print('Conexão encerrada.')
-            
+
 
 if __name__ == '__main__':
     database_manager()
