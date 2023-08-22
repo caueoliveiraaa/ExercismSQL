@@ -126,14 +126,51 @@ class BancoDeDados:
         else:
             print(f'Tabela {nome_tabela} com id {id_linha} nao exite.')
 
+
     @staticmethod
     def valida_colunas_banco(nome, numero, email):
+        # Validar email
+        valida_email = False
+        if len(email) >= 10 and '@' in email and '.' in email:
+            valida_email = True
 
-        ##### VALIDA EMAILS =  Precisam ter  @  e  .   em um len de pelo menos 10 
-        ##### VALIDA NOME = Precisa ter tres caracteres e nao pode ter numero
-        ##### VALIDA NUMERO = Só pode numeros e os simbolos:   +    ()    - 
+        
+        # Validar nome    
+        valida_nome = False
+        numeros = [
+            '1', '2', '3', '4', '5',
+            '6', '7', '8', '9', '0'
+        ]
 
-        ...
+        if len(nome) >= 3:
+            valida_nome = True
+            for numero in numeros:
+                if numero in nome:
+                    valida_nome = False
+        
+        # Validar nuemro
+        valida_numero = False
+        lista_simbilo = ['(', ')', '-', '+']
+        if len(numero) >= 8 and len(numero) <= 14:
+            numeros_lista = list(numero)
+
+            contador = 0
+            for n in numeros_lista:
+                if n in numeros or n in lista_simbilo:
+                    if n in numeros:
+                        contador += 1
+                elif n not in numeros and n not in lista_simbilo:
+                    contador = 0
+                    break
+            
+            if contador >= 8:
+                valida_numero = True
+       
+        print(f'Nome é válido: {valida_nome}')
+        print(f'Número é válido: {valida_numero}')
+        print(f'E-mail é válido: {valida_email}')
+
+        return valida_email and valida_nome and valida_numero
 
 
 def database_manager():
@@ -164,12 +201,21 @@ Insira a operação (1 - 6): '''
                 numero = input('Informe o número do contato: ')
                 email = input('Informe o e-mail do contato: ')
 
-                BancoDeDados.insere_dados(
-                    nome_tabela=tabela,
-                    nome_usuario=nome,
-                    numero_usuario=numero,
-                    email_usuario=email
+                dados_validos = BancoDeDados.valida_colunas_banco(
+                    nome=nome,
+                    numero=numero,
+                    email=email
                 )
+
+                if dados_validos is True:
+                    BancoDeDados.insere_dados(
+                        nome_tabela=tabela,
+                        nome_usuario=nome,
+                        numero_usuario=numero,
+                        email_usuario=email
+                    )
+                else:
+                    print('Informe dados válidos!')
             elif operacao == 3:
                 tabela = input('Informe o nome da tabela: ')
                 id_linha = input('Informe o id da linha: ')
@@ -187,13 +233,22 @@ Insira a operação (1 - 6): '''
                 numero = input('Informe o novo número do contato: ')
                 email = input('Informe o nobo e-mail do contato: ')
 
-                BancoDeDados.atualiza_linha(
-                    id_linha=id_linha,
-                    nome_tabela=tabela,
-                    nome_novo=nome,
-                    numero_novo=numero,
-                    email_novo=email
+                dados_validos = BancoDeDados.valida_colunas_banco(
+                    nome=nome,
+                    numero=numero,
+                    email=email
                 )
+
+                if dados_validos:
+                    BancoDeDados.atualiza_linha(
+                        id_linha=id_linha,
+                        nome_tabela=tabela,
+                        nome_novo=nome,
+                        numero_novo=numero,
+                        email_novo=email
+                    )
+                else:
+                    print('Informe dados válidos!')
             elif operacao == 6:
                 print('Programa encerrado.')
                 break
@@ -211,4 +266,3 @@ Insira a operação (1 - 6): '''
 
 if __name__ == '__main__':
     database_manager()
-    
