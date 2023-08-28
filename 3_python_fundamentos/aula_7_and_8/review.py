@@ -64,6 +64,20 @@ def verifica_se_eh_impar_ou_par(numero_parametro):
     return resultado    
 
 
+# funcao para verificar qual numero de uma lista de numeros eh o maior
+def retorna_maior_numero_em_lista(lista_de_dados):
+    maior_numero = None
+
+    # usar for para achar maior numero
+
+    return maior_numero 
+
+
+# funcao para verificar qual numero de uma lista de numeros eh o menor
+def funcao():
+    ...
+
+
 
 
 def main():
@@ -126,6 +140,22 @@ def main():
                 if resultado != '':
                     print(f'O número {numero} é {resultado}!')
 
+            elif funcao_selecionada == 6:
+                lista_de_dados = []
+                contador = 0
+                limite = int(input('Informe quantos items serão inseridos: '))
+
+                while contador < limite:
+                    try:
+                        item = int(input(f'Informe o {contador + 1}º item: '))
+                        lista_de_dados.append(item)
+                        contador += 1
+                    except:
+                        print('Informe um número válido')
+
+                maior_numero = retorna_maior_numero_em_lista(lista_de_dados)
+                if maior_numero != None:
+                    print(f'O maior número da lista é: {maior_numero}')
 
         except Exception as e:
             print(f'Erro: {e}')    
