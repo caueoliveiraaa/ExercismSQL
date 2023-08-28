@@ -1,5 +1,6 @@
 import os
 
+ ####################### TOPO DO CODIGO ############################
 
 def eh_positivo(numero_parametro):
     if numero_parametro > 0:
@@ -18,21 +19,49 @@ def sao_numeros_iguais(numero_parametro_1, numero_parametro_2):
         print('Informar apenas números positivos!')
 
 
+# funcao para verificar e retornar qual numero de dois numeros eh o maior
+# se ambos forem numeros positivos
+def funcao():
+    ...
+
+
+
+# funcao para verificar qual numero de dois numeros eh menor
+# se ambos forem numeros positivos
+def funcao():
+    ...
+
+
+
+
+
+
+
+
+
+####################### PARTE INFERIOR #####################
 
 def main():
     menu = f'''
     \nSelecione a função:
+    0 - Sair
     1 - eh_positivo
     2 - sao_numeros_iguais
     3 - 
     4 -
+    5 -
+    6 -
     --> opcao: '''
 
     while True:
         try:
             funcao_selecionada = int(input(menu))
 
-            if funcao_selecionada == 1:
+            if funcao_selecionada == 0:
+                print('O programa encerrou')
+                break
+
+            elif funcao_selecionada == 1:
                 numero = int(input('Informe um número: '))
 
                 if eh_positivo(numero) is True:
@@ -48,6 +77,15 @@ def main():
                     print(f'O número {numero_1} é igual ao número {numero_2}')
                 else:
                     print(f'O número {numero_1} é diferente do número {numero_2}')
+
+            elif funcao_selecionada == 3:
+
+                ...
+
+            elif funcao_selecionada == 4:
+
+                ...
+
 
         except Exception as e:
             print(f'Erro: {e}')    
