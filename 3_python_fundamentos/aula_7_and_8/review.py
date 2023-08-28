@@ -1,6 +1,5 @@
 import os
 
- ####################### TOPO DO CODIGO ############################
 
 def eh_positivo(numero_parametro):
     if numero_parametro > 0:
@@ -19,8 +18,6 @@ def sao_numeros_iguais(numero_parametro_1, numero_parametro_2):
         print('Informar apenas números positivos!')
 
 
-# funcao para verificar e retornar qual numero de dois numeros eh o maior
-# se ambos forem numeros positivos
 def retorna_maior_numero(numero_parametro_1, numero_parametro_2):
     numero_maior = None
 
@@ -37,25 +34,37 @@ def retorna_maior_numero(numero_parametro_1, numero_parametro_2):
     return numero_maior
 
 
-# funcao para verificar qual numero de dois numeros eh menor
-# se ambos forem numeros positivos
 def retorna_menor_numero(numero_parametro_1, numero_parametro_2):
+    numero_menor = None
 
-    ...
+    if eh_positivo(numero_parametro_1) and eh_positivo(numero_parametro_2):
+        if numero_parametro_1 < numero_parametro_2:
+            numero_menor = numero_parametro_1
+        elif numero_parametro_1 > numero_parametro_2:
+            numero_menor = numero_parametro_2
+        else:
+            print('Os números são iguais! Informe números diferentes!')
+    else:
+        print('Informar apenas números positivos!')
+
+    return numero_menor
 
 
-# funcao para verificar se um numero eh impar ou par
-# se ambos forem numeros positivos
 def verifica_se_eh_impar_ou_par(numero_parametro):
-    
-    ...
+    resultado = ''
+
+    if eh_positivo(numero_parametro):
+        if numero_parametro % 2 == 0:
+            resultado = 'par'
+        else:
+            resultado = 'ímpar'
+    else:
+        print('Informar apenas números positivos!')
+
+    return resultado    
 
 
 
-
-
-
-####################### PARTE INFERIOR #####################
 
 def main():
     menu = f'''
@@ -65,7 +74,7 @@ def main():
     2 - sao_numeros_iguais
     3 - retorna_maior_numero
     4 - retorna_menor_numero
-    5 -
+    5 - verifica_se_eh_impar_ou_par
     6 -
     --> opcao: '''
 
@@ -102,10 +111,20 @@ def main():
                 if numero_retornado != None:
                     print(f'O maior número é: {numero_retornado}')
 
-
             elif funcao_selecionada == 4:
+                numero_1 = int(input('Informe o primeiro número: '))
+                numero_2 = int(input('Informe o segundo número: '))
+                
+                numero_retornado = retorna_maior_numero(numero_1, numero_2)
+                if numero_retornado != None:
+                    print(f'O maiomenor número é: {numero_retornado}')
 
-                ...
+            elif funcao_selecionada == 5:
+                numero = int(input('Informe um número: '))
+                resultado = verifica_se_eh_impar_ou_par(numero)
+
+                if resultado != '':
+                    print(f'O número {numero} é {resultado}!')
 
 
         except Exception as e:
