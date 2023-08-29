@@ -108,13 +108,28 @@ def rodar_calculadora(numero_1, numero_2, operacao):
         return numero_1 / numero_2
 
 
-
 # funcao para verificar quantas vezes uma letra especificada pelo usuario aparece 
-# dentro de um # texto tambem informado pelo usuario e mostre quantas vezes 
+# dentro de um texto tambem informado pelo usuario e mostre quantas vezes 
 # numeros de 1 a 9 aparecem caso tenha numeros no texto
 def funcao():
     ...
 
+
+# funcao para verificar quanto um funcionario ganhou durante um mes,
+# com base no valor que o colaborador ganha por hora e em quantos dias
+# aquele mes atual tem. Passar tbm a quantidade de horas trabalhadas por dia
+# Todas essas informacoes devem ser passadas por parametro
+def funcao():
+    ...
+
+
+# funcao para verificar quantos items existem em uma lista no total,
+#  mas também a quantidade de itens que sao string ou ints ou floats dentro da lista.
+# A função deve retornar a quantidade de cada um. Quando os dados forem enviados pelo
+#  usuario via input, a lista precisa ter pelo menos 6 itens, dois send inteiros,
+# dois sendo floats e dois sendo strings antes de chamar a funcao
+def funcao():
+    ...
 
 
 def main():
