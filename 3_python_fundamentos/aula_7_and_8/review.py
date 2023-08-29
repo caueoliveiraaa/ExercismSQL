@@ -97,45 +97,41 @@ def retorna_quantidade_de_impares_e_pares_em_lista(lista_de_dados):
     return contador_pares, contador_impares
 
 
-# funcao para somar, dividir, subtrair e multiplicar dois numeros,
-#  dependendo da operacao enviada por parametro
 def rodar_calculadora(numero_1, numero_2, operacao):
-    resultado = None
-
     if operacao == 1:
-
-        ...
-
+        return numero_1 + numero_2
     elif operacao == 2:
-
-        ...
-
+        return numero_1 - numero_2
     elif operacao == 3:
-
-        ...
-
+        return numero_1 * numero_2
     elif operacao == 4:
+        return numero_1 / numero_2
 
-        ...
 
-    return resultado 
+
+# funcao para verificar quantas vezes uma letra especificada pelo usuario aparece 
+# dentro de um # texto tambem informado pelo usuario e mostre quantas vezes 
+# numeros de 1 a 9 aparecem caso tenha numeros no texto
+def funcao():
+    ...
+
 
 
 def main():
     menu = f'''
     \nSelecione a função:
-    0 - Sair
-    1 - eh_positivo
-    2 - sao_numeros_iguais
-    3 - retorna_maior_numero
-    4 - retorna_menor_numero
-    5 - verifica_se_eh_impar_ou_par
-    6 - retorna_maior_numero_em_lista
-    7 - retorna_menor_numero_em_lista
-    8 - retorna_quantidade_de_impares_e_pares_em_lista
-    9 - rodar_calculadora
-    10 - 
-    --> opcao: '''
+0 - Sair
+1 - eh_positivo
+2 - sao_numeros_iguais
+3 - retorna_maior_numero
+4 - retorna_menor_numero
+5 - verifica_se_eh_impar_ou_par
+6 - retorna_maior_numero_em_lista
+7 - retorna_menor_numero_em_lista
+8 - retorna_quantidade_de_impares_e_pares_em_lista
+9 - rodar_calculadora
+10 - 
+--> opcao: '''
 
     while True:
         try:
@@ -239,29 +235,35 @@ def main():
 
                 menu_operacoes = ''' 
                 \nOperações:
-                1 - Somar
-                2 - Subtrair
-                3 - Multiplicar
-                4 - Dividir
-                --> opcao: '''
+1 - Somar
+2 - Subtrair
+3 - Multiplicar
+4 - Dividir
+--> opcao: '''
 
                 while True:
                     try:
                         operacao = int(input(menu_operacoes))
-
                         if operacao in [1, 2, 3, 4]:
                             resultado = rodar_calculadora(numero_1, numero_2, operacao)
-
-                            ...
-
+                            print(f'O resultado da operação é: {resultado}')
                             break
-
-
                         else:
                             print('Informe uma operação válida!')
-
                     except:
                         print('Informe um número válido')
+
+            elif funcao_selecionada == 10:
+
+                ...
+
+            elif funcao_selecionada == 11:
+
+                ...
+
+            elif funcao_selecionada == 12:
+                
+                ...
 
         except Exception as e:
             print(f'Erro: {e}')    
