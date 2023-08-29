@@ -111,8 +111,10 @@ def rodar_calculadora(numero_1, numero_2, operacao):
 # funcao para verificar quantas vezes uma letra especificada pelo usuario aparece 
 # dentro de um texto tambem informado pelo usuario e mostre quantas vezes 
 # numeros de 1 a 9 aparecem caso tenha numeros no texto
+# a funcao deve tratar todo o texto com lowercase " .lower() "
 def funcao():
     ...
+
 
 
 # funcao para verificar quanto um funcionario ganhou durante um mes,
