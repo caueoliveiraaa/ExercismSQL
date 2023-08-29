@@ -64,20 +64,61 @@ def verifica_se_eh_impar_ou_par(numero_parametro):
     return resultado    
 
 
-# funcao para verificar qual numero de uma lista de numeros eh o maior
 def retorna_maior_numero_em_lista(lista_de_dados):
-    maior_numero = None
+    maior_numero = lista_de_dados[0]
 
-    # usar for para achar maior numero
+    for item in lista_de_dados:
+        if item > maior_numero:
+            maior_numero = item
 
-    return maior_numero 
-
-
-# funcao para verificar qual numero de uma lista de numeros eh o menor
-def funcao():
-    ...
+    return maior_numero
 
 
+def retorna_menor_numero_em_lista(lista_de_dados):
+    maior_numero = lista_de_dados[0]
+
+    for item in lista_de_dados:
+        if item < maior_numero:
+            maior_numero = item
+
+    return maior_numero
+
+
+def retorna_quantidade_de_impares_e_pares_em_lista(lista_de_dados):
+    contador_impares = 0
+    contador_pares = 0
+
+    for item in lista_de_dados:
+        if item % 2 == 0:
+            contador_pares += 1
+        else:
+            contador_impares += 1
+
+    return contador_pares, contador_impares
+
+
+# funcao para somar, dividir, subtrair e multiplicar dois numeros,
+#  dependendo da operacao enviada por parametro
+def rodar_calculadora(numero_1, numero_2, operacao):
+    resultado = None
+
+    if operacao == 1:
+
+        ...
+
+    elif operacao == 2:
+
+        ...
+
+    elif operacao == 3:
+
+        ...
+
+    elif operacao == 4:
+
+        ...
+
+    return resultado 
 
 
 def main():
@@ -89,7 +130,11 @@ def main():
     3 - retorna_maior_numero
     4 - retorna_menor_numero
     5 - verifica_se_eh_impar_ou_par
-    6 -
+    6 - retorna_maior_numero_em_lista
+    7 - retorna_menor_numero_em_lista
+    8 - retorna_quantidade_de_impares_e_pares_em_lista
+    9 - rodar_calculadora
+    10 - 
     --> opcao: '''
 
     while True:
@@ -154,8 +199,69 @@ def main():
                         print('Informe um número válido')
 
                 maior_numero = retorna_maior_numero_em_lista(lista_de_dados)
-                if maior_numero != None:
-                    print(f'O maior número da lista é: {maior_numero}')
+                print(f'O maior número da lista é: {maior_numero}')
+
+            elif funcao_selecionada == 7:
+                lista_de_dados = []
+                contador = 0
+                limite = int(input('Informe quantos items serão inseridos: '))
+
+                while contador < limite:
+                    try:
+                        item = int(input(f'Informe o {contador + 1}º item: '))
+                        lista_de_dados.append(item)
+                        contador += 1
+                    except:
+                        print('Informe um número válido')
+
+                menor_numero = retorna_menor_numero_em_lista(lista_de_dados)
+                print(f'O menor número da lista é: {maior_numero}')
+
+            elif funcao_selecionada == 8:
+                lista_de_dados = []
+                contador = 0
+                limite = int(input('Informe quantos items serão inseridos: '))
+
+                while contador < limite:
+                    try:
+                        item = int(input(f'Informe o {contador + 1}º item: '))
+                        lista_de_dados.append(item)
+                        contador += 1
+                    except:
+                        print('Informe um número válido')
+
+                qty_par, qty_impar = retorna_quantidade_de_impares_e_pares_em_lista(lista_de_dados)
+                print(f'A quantidade de pares é {qty_par} e de ímpares é {qty_impar}')
+
+            elif funcao_selecionada == 9:
+                numero_1 = int(input('Informe o primeiro número: '))
+                numero_2 = int(input('Informe o segundo número: '))
+
+                menu_operacoes = ''' 
+                \nOperações:
+                1 - Somar
+                2 - Subtrair
+                3 - Multiplicar
+                4 - Dividir
+                --> opcao: '''
+
+                while True:
+                    try:
+                        operacao = int(input(menu_operacoes))
+
+                        if operacao in [1, 2, 3, 4]:
+                            resultado = rodar_calculadora(numero_1, numero_2, operacao)
+
+                            ...
+
+                            break
+
+
+                        else:
+                            print('Informe uma operação válida!')
+
+                    except:
+                        print('Informe um número válido')
 
         except Exception as e:
             print(f'Erro: {e}')    
