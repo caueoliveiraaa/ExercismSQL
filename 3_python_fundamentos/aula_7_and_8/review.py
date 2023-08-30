@@ -1,6 +1,14 @@
 import os
 
 
+# transformar funcoes em classe e testar
+# criar base de dados e uma classe para a base de dados
+# criar funcoes para criar tabela, inserir registros, deletar registros, deletar tabela, 
+# pesquisar quantos registros tem, pesquisar o ultimo registro inserido
+# herdar classe do banco de dados e aplicar funcoes
+
+
+
 def eh_positivo(numero_parametro):
     if numero_parametro > 0:
         return True
@@ -106,32 +114,95 @@ def rodar_calculadora(numero_1, numero_2, operacao):
         return numero_1 * numero_2
     elif operacao == 4:
         return numero_1 / numero_2
+    
+
+def verifica_letra_em_string(letra, texto):
+    contador_letra = 0
+    contador_numero = 0
+    lista_texto = list(texto)
+    
+    for char in lista_texto:
+        if char.lower() == letra.lower():
+            contador_letra += 1
+        if char.isdigit():
+            contador_numero += 1
+
+    return contador_letra, contador_numero
 
 
-# funcao para verificar quantas vezes uma letra especificada pelo usuario aparece 
-# dentro de um texto tambem informado pelo usuario e mostre quantas vezes 
-# numeros de 1 a 9 aparecem caso tenha numeros no texto
-# a funcao deve tratar todo o texto com lowercase " .lower() "
-def funcao():
-    ...
+def calcular_salario(dias_trabalhados, horas_diarias, valor_hora):
+    resultado = dias_trabalhados * horas_diarias * valor_hora
+    return resultado  
 
 
+def organizador_lista(lista_de_dados):
+    contador_str = 0
+    contador_int = 0
+    contador_float = 0
 
-# funcao para verificar quanto um funcionario ganhou durante um mes,
-# com base no valor que o colaborador ganha por hora e em quantos dias
-# aquele mes atual tem. Passar tbm a quantidade de horas trabalhadas por dia
-# Todas essas informacoes devem ser passadas por parametro
-def funcao():
-    ...
+    for item in lista_de_dados:
+        if type(item) == str:
+            contador_str += 1
+        elif type(item) == int:
+            contador_int += 1
+        elif type(item) == float:
+            contador_float += 1
+
+    return contador_str, contador_int, contador_float
 
 
-# funcao para verificar quantos items existem em uma lista no total,
-#  mas também a quantidade de itens que sao string ou ints ou floats dentro da lista.
-# A função deve retornar a quantidade de cada um. Quando os dados forem enviados pelo
-#  usuario via input, a lista precisa ter pelo menos 6 itens, dois send inteiros,
-# dois sendo floats e dois sendo strings antes de chamar a funcao
-def funcao():
-    ...
+def valida_lista_dinamica(lista):
+    contador_str = 0
+    contador_int = 0
+    contador_float = 0
+
+    for item in lista:
+        if type(item) == str:
+            contador_str += 1
+        elif type(item) == int:
+            contador_int += 1
+        elif type(item) == float:
+            contador_float +=1
+    
+    if contador_str >= 2 and contador_int >= 2 and contador_float >= 2:
+        return True
+
+    return False
+
+
+def receber_lista_usuario():
+    lista_retorno = []
+
+    while True:
+        try:
+            item = input(
+                f'Informe o {len(lista_retorno) + 1}º item (p para parar): '
+            )
+
+            if item != 'p':
+                try:
+                    item = int(item)
+                    lista_retorno.append(item)
+                    continue                
+                except:
+                    try:
+                        item = float(item)
+                        lista_retorno.append(item)
+                        continue                
+                    except:
+                        pass
+            
+                lista_retorno.append(item)
+            else:
+                if len(lista_retorno) >= 6:
+                    print(f'Foram inseridos {len(lista_retorno)} itens!')
+                    break
+                else:
+                    print('A lista precisa de pelo menos 6 itens!')
+        except Exception as e:
+            print(f'Erro: {str(e)}')
+    
+    return lista_retorno
 
 
 def main():
@@ -147,7 +218,9 @@ def main():
 7 - retorna_menor_numero_em_lista
 8 - retorna_quantidade_de_impares_e_pares_em_lista
 9 - rodar_calculadora
-10 - 
+10 - verifica_letra_em_string
+11 - calcular_salario
+12 - organizador_lista
 --> opcao: '''
 
     while True:
@@ -271,21 +344,54 @@ def main():
                         print('Informe um número válido')
 
             elif funcao_selecionada == 10:
-
-                ...
+                letra = input('Informe a letra: ')
+                texto = input('Informe o texto: ')
+                
+                if len(letra) == 1 and len(texto) >= 10:
+                    letras, numeros = verifica_letra_em_string(letra, texto)
+                    print(f'A letra {letra} apareceu {letras}')
+                    print(f'Apareceram {numeros} numeros')
+                    print(f'dentro do texto: {texto}')
+                else:
+                    print('Informe apenas uma letra', end=' ')
+                    print('e um texto com pelo menos 10 letras.')
 
             elif funcao_selecionada == 11:
+                try:
+                    dias = int(input('Informe a quantidade de dias: '))
+                    horas = int(input('Informe a quantidade de horas: '))
+                    valor = int(input('Informe o valor da hora: '))
 
-                ...
+                    if dias >= 15 and horas >= 6 and valor >= 10:
+                        resultado = calcular_salario(
+                            dias_trabalhados=dias,
+                            horas_diarias=horas,
+                            valor_hora=valor
+                        )
 
-            elif funcao_selecionada == 12:
+                        print(f'O resultado é: {resultado}')
+                    else:
+                        print(
+                            'Informe valores válidos!'
+                        )
+                except Exception as e:
+                    print(f'Erro: {str(e)}')
+                    print('Informe números válidos!')
                 
-                ...
+            elif funcao_selecionada == 12:
+                lista = receber_lista_usuario()
+                if valida_lista_dinamica(lista) == True:
+                    strings, ints, floats = organizador_lista(lista)
+                    print(f'Na lista informada existem {strings} strings', end=' ')
+                    print(f'{ints} inteiros, e {floats} floats')
+                else:
+                    print('A lista precisa de pelos menos', end=' ')
+                    print('2 strings, 2 ints e 2 floats!')
 
         except Exception as e:
             print(f'Erro: {e}')    
 
 
 if __name__== '__main__':
-    os.system('cls') 
+    os.system('cls')
     main()
