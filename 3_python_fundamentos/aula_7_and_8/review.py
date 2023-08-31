@@ -1,15 +1,13 @@
 import os
+from review_db import LogicaBanco
 
-
-# transformar funcoes em classe e testar
-# criar base de dados e uma classe para a base de dados
 # criar funcoes para criar tabela, inserir registros,
 # deletar registros, deletar tabela, 
 # pesquisar quantos registros tem, pesquisar o ultimo registro inserido
 # herdar classe do banco de dados e aplicar funcoes
 
 
-class LogicaProgramacao():
+class LogicaProgramacao(LogicaBanco):
     def __init__(self, nome):
         self.nome = nome
 
@@ -212,24 +210,25 @@ class LogicaProgramacao():
 
     def main(self):
         menu = f'''
-        \nSelecione a função:
-    0 - Sair
-    1 - eh_positivo
-    2 - sao_numeros_iguais
-    3 - retorna_maior_numero
-    4 - retorna_menor_numero
-    5 - verifica_se_eh_impar_ou_par
-    6 - retorna_maior_numero_em_lista
-    7 - retorna_menor_numero_em_lista
-    8 - retorna_quantidade_de_impares_e_pares_em_lista
-    9 - rodar_calculadora
-    10 - verifica_letra_em_string
-    11 - calcular_salario
-    12 - organizador_lista
-    --> opcao: '''
+    \nSelecione a função:
+0 - Sair
+1 - eh_positivo
+2 - sao_numeros_iguais
+3 - retorna_maior_numero
+4 - retorna_menor_numero
+5 - verifica_se_eh_impar_ou_par
+6 - retorna_maior_numero_em_lista
+7 - retorna_menor_numero_em_lista
+8 - retorna_quantidade_de_impares_e_pares_em_lista
+9 - rodar_calculadora
+10 - verifica_letra_em_string
+11 - calcular_salario
+12 - organizador_lista
+--> opcao: '''
 
         while True:
             try:
+                registro_string = ''
                 funcao_selecionada = int(input(menu))
 
                 if funcao_selecionada == 0:
@@ -392,6 +391,9 @@ class LogicaProgramacao():
                     else:
                         print('A lista precisa de pelos menos', end=' ')
                         print('2 strings, 2 ints e 2 floats!')
+
+                self.insere_registro('registros', registro_string)
+
 
             except Exception as e:
                 print(f'Erro: {e}')    
