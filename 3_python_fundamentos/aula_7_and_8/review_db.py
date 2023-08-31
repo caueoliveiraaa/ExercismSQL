@@ -54,8 +54,13 @@ class LogicaBanco:
             print(f'Erro: {str(e)}')
 
 
-    def retorna_ultimo_registro_inserido(self, nome_tabela):
+    def selecionar_ultimo_registro_inserido(self, nome_tabela):
         try:
+            
+            # trazer o ultimo registro via id
+            # pelo maior id
+            # adicionar como opcao no main em review.py
+
             ...
         except Exception as e:
             print(f'Erro: {str(e)}')
@@ -63,13 +68,19 @@ class LogicaBanco:
 
     def deletar_registro(self, id_linha, nome_tabela):
         try:
+
+            # deletar registro via id
+            # adicionar como opcao no main em review.py
+
             ...
         except Exception as e:
             print(f'Erro: {str(e)}')
 
 
-    def retornar_quantidade_registros(self, nome_tabela):
+    def selecionar_quantidade_registros(self, nome_tabela):
         try:
+            # usar select para mostrar quantidade de registros
+            # adicionar como opcao no main em review.py
             ...
         except Exception as e:
             print(f'Erro: {str(e)}')

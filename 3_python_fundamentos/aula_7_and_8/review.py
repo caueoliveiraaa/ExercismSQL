@@ -231,6 +231,10 @@ class LogicaProgramacao(LogicaBanco):
                 registro_string = ''
                 funcao_selecionada = int(input(menu))
 
+                ##### INSERIR MENSAGENS NA VARIAVEL registro_string
+                ##### DENTRO DE TODOS OS ELIFS COM OPERACOES
+
+
                 if funcao_selecionada == 0:
                     print('O programa encerrou')
                     break
@@ -240,8 +244,11 @@ class LogicaProgramacao(LogicaBanco):
 
                     if self.eh_positivo(numero) == True:
                         print(f'O número {numero} é positivo')
+                        registro_string = f'(eh_positivo) O número {numero} é positivo'
                     else:
                         print(f'O número {numero} é negativo')
+                        registro_string = f'(eh_positivo) O número {numero} é negativo'
+
 
                 elif funcao_selecionada == 2:
                     numero_1 = int(input('Informe o primeiro número: '))
@@ -249,8 +256,10 @@ class LogicaProgramacao(LogicaBanco):
 
                     if self.sao_numeros_iguais(numero_1, numero_2) == True:
                         print(f'O número {numero_1} é igual ao número {numero_2}')
+                        registro_string = f'(sao_numeros_iguais) O número {numero_1} é igual ao número {numero_2}'
                     else:
                         print(f'O número {numero_1} é diferente do número {numero_2}')
+                        registro_string = f'(sao_numeros_iguais) O número {numero_1} é diferente do número {numero_2}'
 
                 elif funcao_selecionada == 3:
                     numero_1 = int(input('Informe o primeiro número: '))
@@ -393,7 +402,6 @@ class LogicaProgramacao(LogicaBanco):
                         print('2 strings, 2 ints e 2 floats!')
 
                 self.insere_registro('registros', registro_string)
-
 
             except Exception as e:
                 print(f'Erro: {e}')    
