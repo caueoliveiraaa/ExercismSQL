@@ -10,6 +10,10 @@ import os
 
 
 class LogicaProgramacao():
+    def __init__(self, nome):
+        self.nome = nome
+
+
     def eh_positivo(self, numero_parametro):
         if numero_parametro > 0:
             return True
@@ -395,6 +399,6 @@ class LogicaProgramacao():
 
 if __name__== '__main__':
     os.system('cls')
-    objeto_da_classe = LogicaProgramacao()
+    objeto_da_classe = LogicaProgramacao('objeto 1')
+    print('rodando...', objeto_da_classe.nome)
     objeto_da_classe.main()
-    
