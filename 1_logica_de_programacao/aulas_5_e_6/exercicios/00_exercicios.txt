@@ -1,5 +1,0 @@
-1 - Verificar se um número é primo (Usar IF, FOR e FUNCTION)
-
-2: Contar quantas vezes uma letra aparece em uma string (Usar IF, FOR e FUNCTION)
-
-3: Calcular a soma dos números pares em um intervalo (Usar IF, WHILE e FUNCTION)
